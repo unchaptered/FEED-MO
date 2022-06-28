@@ -27,6 +27,15 @@
         width: calc(100vw - 20px);
         padding: 10px 10px 5px 10px;
 
+        @media screen and (min-width: 1080px) {
+
+            & { 
+                margin: 0 auto;
+                width: 1080px;
+            }
+            
+        }
+
         // display
         display: flex;
         justify-content: space-between;
