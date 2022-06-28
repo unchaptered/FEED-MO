@@ -8,8 +8,8 @@
 		"url": "https://velog.io/@unchapterd"
 	},
 	"repository": {
-	  "type": "git",
-	  "url": "git+https://github.com/unchaptered/FEED-MO.git"
+		"type": "git",
+		"url": "git+https://github.com/unchaptered/FEED-MO.git"
 	},
 	"type": "module",
 	"scripts": {
