@@ -1,38 +1,22 @@
-# create-svelte
+# What is FEED MO?
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+`Feedmo(2022~)` is Free Feedback Service for Web Developer.
+After to join our service(quickly), you can use Feedback Service as RESTful API.
 
-## Creating a project
+- Recommendation
 
-If you're seeing this, you've probably already done this step. Congrats!
-
-```bash
-# create a new project in the current directory
-npm init svelte
-
-# create a new project in my-app
-npm init svelte my-app
+```typescript
+const postFeedback = async () => {
+    await axios.post('Preparing to publish...', {
+        authentication: 'your access token',
+        refreshtoken: 'your refresh token'
+    }, {
+        // include user's feedback, after set your base form
+    });
+}
 ```
 
-## Developing
+We record feedback depends on your origin URL with Token Authentication.
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+- Basically, Token don't include your private data for Safety.
+- So, if you wanna use some services, need Private Data, you must visit our Official Site.
