@@ -13,7 +13,7 @@
 
     <section>
         <a href={routes.forntend.join}>JOIN</a>
-        <a href={routes.forntend.join}>LOGIN</a>
+        <a href={routes.forntend.login}>LOGIN</a>
     </section>
 
 </nav>
