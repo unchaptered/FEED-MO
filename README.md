@@ -20,3 +20,11 @@ We record feedback depends on your origin URL with Token Authentication.
 
 - Basically, Token don't include your private data for Safety.
 - So, if you wanna use some services, need Private Data, you must visit our Official Site.
+
+## Wanna know more codes...?
+
+ALl codes exists on public repositories.
+If you have interest about these, visit my repositories.
+
+- frontend repositories : https://github.com/unchaptered/FEED-MO
+- backend repositories : https://github.com/unchaptered/feedback-your-project
