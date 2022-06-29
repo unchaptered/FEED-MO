@@ -1,3 +1,4 @@
+import path from 'path';
 import adapter from '@sveltejs/adapter-auto';
 
 import sveltePreprocess from 'svelte-preprocess';
@@ -19,6 +20,14 @@ const config = {
 		adapter: adapter(),
 		prerender: {
 			default: true
+		}
+	},
+	compilerOptions: {
+		sveltePath: {
+			'@components': path.resolve('./src/components'),
+			'@constants': path.resolve('./src/constants'),
+			'@routes': path.resolve('./src/routes'),
+			'@store': path.resolve('./src/store'),
 		}
 	}
 };
