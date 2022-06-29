@@ -1,7 +1,7 @@
 <script lang='ts'>
 
     import { callPage } from '../store/functions/button.linker';
-    import { repositories } from '../store/constants/link';
+    import { repositories } from '../store/link';
 
 </script>
 

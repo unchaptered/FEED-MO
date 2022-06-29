@@ -1,6 +1,6 @@
 <script lang='ts'>
 
-    import { routes } from '../store/constants/link';
+    import { routes } from '../store/link';
 
 </script>
 
