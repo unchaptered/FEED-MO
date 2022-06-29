@@ -1,7 +1,7 @@
+<!-- JS in HTML-->
 <script lang='ts'>
 
     import UserValidator from '../store/modules/validator/user.validator';
-
     const validator = new UserValidator();
     
     let userId: string = '';
@@ -20,6 +20,17 @@
     let isValidPassowrdConfirm: boolean = false;
     const validatePasswordConfirm = () => isValidPassowrdConfirm = validator.isPasswordConfirm(password, passwordConfirm);
 
+    const handleSubmit = (event: Event) => {
+
+        event.preventDefault();
+        !isValidId ? window.alert('Invalid User ID (id.length > 5 and < 30)')
+            : !isValidEmail ? window.alert('Invalid User Email (check email form)')
+            : !isValidPassword ? window.alert('Invalid Passowrd (password.length > 5 and < 30)')
+            : !isValidPassowrdConfirm ? window.alert('Incorrect Password Confrim (please check it out.)')
+            : 'Correct!';
+
+    }
+    
 </script>
 
 <section class='routes_join'>
@@ -39,7 +50,7 @@
         <label for='passwordConfirm'> Password </label>
         <input id='passwordConfirm' placeholder='Type your password' bind:value={passwordConfirm} on:keyup={validatePasswordConfirm} />
 
-        <input type='submit'/>
+        <input type='submit' on:click={(event) => handleSubmit(event)}/>
 
         <span>{
             !isValidId ? 'Invalid User ID (id.length > 5 and < 30)'
@@ -52,7 +63,6 @@
     </form>
 
 </section>
-
 
 <!-- CSS in HTML -->
 <style lang='scss'>
