@@ -1,6 +1,6 @@
 <script lang='ts'>
 
-    import { routes } from '../store/link';
+    import { routes } from '@store/link';
 
 </script>
 
