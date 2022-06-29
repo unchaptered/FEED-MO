@@ -2,7 +2,10 @@
 <script lang='ts'>
 
     import UserValidator from '../store/modules/validator/user.validator';
+    import MessageProvider from '../store/modules/providers/message.provider';
+
     const validator = new UserValidator();
+    const messenger = new MessageProvider();
     
     let userId: string = '';
     let isValidId: boolean = false;
@@ -53,10 +56,10 @@
         <input type='submit' on:click={(event) => handleSubmit(event)}/>
 
         <span>{
-            !isValidId ? 'Invalid User ID (id.length > 5 and < 30)'
-                : !isValidEmail ? 'Invalid User Email (check email form)'
-                : !isValidPassword ? 'Invalid Passowrd (password.length > 5 and < 30)'
-                : !isValidPassowrdConfirm ? 'Incorrect Password Confrim (please check it out.)'
+            !isValidId ? messenger.getMessage(1000)
+                : !isValidEmail ? messenger.getMessage(1001)
+                : !isValidPassword ? messenger.getMessage(1002)
+                : !isValidPassowrdConfirm ? messenger.getMessage(1003)
                 : 'Correct!'
         }</span>
 

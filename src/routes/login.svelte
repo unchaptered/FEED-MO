@@ -2,7 +2,10 @@
 <script lang='ts'>
 
     import UserValidator from '../store/modules/validator/user.validator';
+    import MessageProvider from '../store/modules/providers/message.provider';
+
     const validator = new UserValidator();
+    const messenger = new MessageProvider();
 
     let userEmail: string = '';
     let isValidEmail: boolean = false;
@@ -15,8 +18,8 @@
     const handleSubmit = (event: Event) => {
 
     event.preventDefault();
-            !isValidEmail ? window.alert('Invalid User Email (check email form)')
-            : !isValidPassword ? window.alert('Invalid Passowrd (password.length > 5 and < 30)')
+            !isValidEmail ? window.alert(messenger.getMessage(1001))
+            : !isValidPassword ? window.alert(messenger.getMessage(1002))
             : 'Correct!';
 
     }
@@ -38,8 +41,8 @@
         <input type='submit' on:click={(event) => handleSubmit(event)}/>
 
         <span>{
-                !isValidEmail ? 'Invalid User Email (check email form)'
-                : !isValidPassword ? 'Invalid Passowrd (password.length > 5 and < 30)'
+                !isValidEmail ? messenger.getMessage(1001)
+                : !isValidPassword ? messenger.getMessage(1002)
                 : 'Correct!'
         }</span>
 
