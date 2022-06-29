@@ -20,16 +20,25 @@ const config = {
 		adapter: adapter(),
 		prerender: {
 			default: true
-		}
+		},
+		// vite: {
+		// 	build: {
+		// 		rollupOptions: {
+		// 			external: [
+		// 				'validator'
+		// 			]
+		// 		}
+		// 	}
+		// }
 	},
 	compilerOptions: {
-		sveltePath: {
-			'@components': path.resolve('./src/components'),
-			'@constants': path.resolve('./src/constants'),
-			'@routes': path.resolve('./src/routes'),
-			'@store': path.resolve('./src/store'),
-		}
-	}
+		// sveltePath: {
+		// 	'@components': path.resolve('./src/components'),
+		// 	'@constants': path.resolve('./src/constants'),
+		// 	'@routes': path.resolve('./src/routes'),
+		// 	'@store': path.resolve('./src/store'),
+		// }
+	},
 };
 
 export default config;
