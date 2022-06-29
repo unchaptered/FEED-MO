@@ -1,5 +1,4 @@
-import isEmail from 'validator/lib/isEmail';
-
+import validator from 'validator';
 
 export default class UserValidator {
 
@@ -11,7 +10,7 @@ export default class UserValidator {
     }
     
     isEmail(target: string): boolean {
-        return isEmail(target)
+        return validator.isEmail(target)
     }
 
     isPassword(target: string): boolean {
